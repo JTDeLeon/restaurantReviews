@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/media_queries.css">
   <!-- Adding the viewport tag for mobile responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurant Reviews</title>
@@ -20,7 +21,7 @@
     <section id="map-container">
       <div id="map"></div>
     </section>
-    <section>
+    <section id="details-container">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">

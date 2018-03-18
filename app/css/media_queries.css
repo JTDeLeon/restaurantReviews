@@ -1,0 +1,135 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+  nav {
+    display: flex;
+  }
+
+  nav h1 a {
+    letter-spacing: 5px;
+  }
+
+  #restaurants-list li {
+    padding: 15px;
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #restaurants-list li h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+  #restaurants-list .restaurant-img {
+    margin: 15px 0;
+  }
+
+  .filter-options select {
+    width: 90%;
+  }
+
+  .filter-options {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px 0;
+  }
+
+  #details-container {
+    width: 100%;
+  }
+
+
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  nav {
+    display: flex;
+  }
+
+  nav h1 a {
+    letter-spacing: 15px;
+  }
+
+  .filter-options {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  #restaurants-list li {
+    padding: 25px;
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #restaurants-list li h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #restaurants-list .restaurant-img {
+    margin: 15px 0;
+  }
+
+  #restaurants-list p {
+    font-size: 16px;
+  }
+
+  #restaurants-list li a {
+    font-size: 20px;
+  }
+
+}
+
+/* Desktop Scalable ----------- */
+@media only screen and (min-device-width : 1025px) {
+
+  .filter-options {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .filter-options select {
+    width: 40%;
+  }
+
+  #restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  #restaurants-list li {
+    width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #restaurants-list li h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #restaurants-list .restaurant-img {
+    margin: 15px 0;
+  }
+
+  #restaurants-list p {
+    font-size: 16px;
+  }
+
+  #restaurants-list li a {
+    font-size: 20px;
+  }
+
+}
