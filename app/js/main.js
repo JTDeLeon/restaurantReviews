@@ -63,6 +63,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.setAttribute('role',"option");
     select.append(option);
   });
 }
@@ -80,7 +81,30 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+
   updateRestaurants();
+
+  // //Add Tab Index -1
+  // document.querySelectorAll('#map div a').forEach(function(item) {
+  //     item.setAttribute('tabindex','-1');
+  // });
+  //
+  // document.querySelectorAll('#map div').forEach(function(item) {
+  //     item.setAttribute('tabindex','-1');
+  // });
+  //
+  // //Not working
+  // document.querySelectorAll('#map div div').forEach(function(item) {
+  //     item.setAttribute('tabindex','-1');
+  // });
+  //
+  // document.querySelectorAll('.gmnoprint').forEach(function(item) {
+  //     item.setAttribute('tabindex','-1');
+  // });
+
+
+
+
 }
 
 /**
@@ -160,6 +184,9 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('tabindex','1');
+  more.setAttribute('role',"button");
+  more.setAttribute('aria-label',restaurant.name+" view details");
   li.append(more)
 
   return li
