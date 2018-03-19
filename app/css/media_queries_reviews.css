@@ -1,7 +1,15 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
-  #map-container {
-    display: none;
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inside #map-container {
+    display: block;
+    height: 500px;
+    width: 100%;
+    position: relative;
   }
 
   nav {
@@ -26,6 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 40px 30px;
   }
 
   #restaurant-name {
