@@ -1,0 +1,287 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+  #map-container {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav h1 a {
+    letter-spacing: 5px;
+  }
+
+  #breadcrumb {
+    width: 100%;
+  }
+
+  #maincontent {
+    width: 100%;
+  }
+
+  #restaurant-container {
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #restaurant-name {
+    text-align: center;
+  }
+
+  #restaurant-hours {
+    padding: 0 35px;
+  }
+
+  #reviews-container {
+    width: auto;
+    padding: 10px;
+  }
+
+  #reviews-container h2 {
+    text-align: center;
+  }
+
+  .reviewHeaderDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    margin: auto;
+  }
+
+  .reviewHeaderDiv p {
+    margin: auto;
+    color: white;
+  }
+
+  .reviewHeaderDiv .reviewDate {
+    color: #9e9e9e;
+  }
+
+  #reviews-list li p {
+    margin: 0;
+  }
+
+  .reviewContainerDiv {
+    padding: 10px;
+  }
+
+  #reviews-list li .reviewContainerDiv .reviewRating {
+    background-color: orange;
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+  }
+
+  #reviews-list li {
+    padding: 0;
+    margin: 20px auto;
+    border-radius: 10px 0 10px 0;
+  }
+
+  .inside #footer {
+    width: auto;
+    position: relative;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  #restaurant-container {
+    padding: 145px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #restaurant-name {
+    text-align: center;
+    font-size: 23px;
+  }
+
+  #restaurant-img {
+    margin: auto;
+  }
+
+  #restaurant-cuisine {
+    margin: auto;
+  }
+
+  #restaurant-address {
+    margin: auto;
+    padding: 10px 0;
+  }
+
+  #restaurant-hours {
+    margin: auto;
+  }
+
+  #reviews-container {
+    padding: 0;
+  }
+
+  #reviews-container h2 {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .reviewHeaderDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    margin: auto;
+  }
+
+  .reviewHeaderDiv p {
+    margin: 0;
+    color: white;
+  }
+
+  .reviewHeaderDiv .reviewDate {
+    color: #9e9e9e;
+  }
+
+  .reviewContainerDiv {
+    padding: 10px;
+  }
+
+  #reviews-list li p {
+    margin: 0;
+  }
+
+  #reviews-list li .reviewContainerDiv .reviewRating {
+    background-color: orange;
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+  }
+
+  #reviews-list li {
+    padding: 0;
+    margin: 20px auto;
+    border-radius: 10px 0 10px 0;
+  }
+
+  .inside #footer {
+    width: auto;
+    position: relative;
+  }
+
+}
+
+/* Desktop Scalable ----------- */
+@media only screen and (min-device-width : 1025px) {
+  #breadcrumb li {
+    font-size: 20px;
+  }
+
+  #restaurant-container {
+    padding: 145px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #restaurant-name {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #restaurant-img {
+    margin: auto;
+  }
+
+  #restaurant-cuisine {
+    margin: auto;
+  }
+
+  #restaurant-address {
+    margin: auto;
+    padding: 10px 0;
+    font-size: 25px;
+  }
+
+  #restaurant-hours {
+    margin: auto;
+  }
+
+  #restaurant-hours td {
+    font-size: 20px;
+  }
+
+  #reviews-container {
+    padding: 0;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #reviews-container h2 {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .reviewHeaderDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    margin: auto;
+  }
+
+  .reviewHeaderDiv p {
+    margin: 0;
+    color: white;
+  }
+
+  .reviewHeaderDiv .reviewDate {
+    color: #9e9e9e;
+  }
+
+  .reviewContainerDiv {
+    padding: 10px;
+  }
+
+  #reviews-list li p {
+    margin: 0;
+  }
+
+  #reviews-list li .reviewContainerDiv .reviewRating {
+    background-color: orange;
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+  }
+
+  #reviews-list li {
+    padding: 0;
+    margin: 20px auto;
+    border-radius: 10px 0 10px 0;
+  }
+
+  .inside #footer {
+    width: auto;
+    position: relative;
+    font-size: 20px;
+  }
+
+}
