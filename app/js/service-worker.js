@@ -21,10 +21,11 @@ self.addEventListener('install',(e)=>{
   console.log("[serviceWorker] has installed");
 
   e.waitUntil(
-
+    //Opens the new cache with the name
     caches.open(cacheName)
       .then((cache)=>{
         console.log("[serviceWorker] caching files");
+        //Caches all the files within the cacheFiles array
         return cache.addAll(cacheFiles);
       })
       .catch((err)=>{
@@ -36,4 +37,21 @@ self.addEventListener('install',(e)=>{
 
 self.addEventListener('activate',(e)=>{
   console.log("[serviceWorker] has activated");
+
+  //Keeps service worker activate event open until completed method below
+  e.waitUntil(
+
+    caches.keys().then((cacheNames)=>{
+      //Checks through each of the promises / arguments sent from the above .keys() method
+      return Promise.all(cacheNames.map((thisCacheName)=>{
+        //Checks to find a cache that is not the current cache name set at the line #1
+        if(thisCacheName !== cacheName){
+          console.log("[serviceWorker] deleting cache",thisCacheName);
+          //Deletes the cache
+          return caches.delete(thisCacheName);
+        }
+      }));
+    })
+
+  );
 });
