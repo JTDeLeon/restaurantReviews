@@ -127,11 +127,13 @@ createReviewHTML = (review) => {
 
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.setAttribute('tabindex','0');
   headerContainer.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
   date.setAttribute('class','reviewDate');
+  date.setAttribute('tabindex','0');
   headerContainer.appendChild(date);
 
   //Append Header to li
@@ -144,10 +146,12 @@ createReviewHTML = (review) => {
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.setAttribute('class','reviewRating');
+  rating.setAttribute('tabindex','0');
   reviewContainer.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.setAttribute('tabindex','0');
   reviewContainer.appendChild(comments);
 
   //Append Content to li
@@ -181,4 +185,17 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+
+//Register Service Worker
+if('serviceWorker' in navigator){
+  navigator.serviceWorker
+    .register('js/service-worker.js')
+    .then(function(registration){
+      console.log("Registered Service Worker");
+    })
+    .catch(function(err){
+      console.log("Error registering service worker",err);
+    })
 }

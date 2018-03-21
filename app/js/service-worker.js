@@ -14,7 +14,18 @@ let cacheFiles = [
 
 
 self.addEventListener('fetch',(e)=>{
-  console.log("[serviceWorker] has fetching",e.request.url);
+  console.log("[serviceWorker] is fetching",e.request.url);
+
+  e.respondWith(
+    fetch(e.request).then((response)=>{
+      if(response.status == 404){
+        return new Response("Whoops, Page Not Found!");
+      }
+      return response;
+    }).catch(()=>{
+      return new Response("Uh Oh, Seems Like The Connection Is Not Enabled!");
+    })
+  )
 });
 
 self.addEventListener('install',(e)=>{

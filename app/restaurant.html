@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Normalize.css for better cross-browser consistency -->
@@ -21,25 +21,26 @@
     <!-- Beginning nav -->
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
-    </nav>
+
     <!-- Beginning breadcrumb -->
-    <ul role="breadcrumb navigation path" id="breadcrumb" >
+    <ul role="menubar" id="breadcrumb" >
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
+    </nav>
   </header>
   <!-- End header -->
 
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section role="Google Map" id="map-container">
-      <div role="Map" id="map"></div>
+    <section role="complementary" id="map-container">
+      <div role="application" id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section role="Restaurant Details" id="restaurant-container">
+    <section role="contentinfo" id="restaurant-container">
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
@@ -48,7 +49,7 @@
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section role="Restaurant Reviews" id="reviews-container">
+    <section role="main" id="reviews-container">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->

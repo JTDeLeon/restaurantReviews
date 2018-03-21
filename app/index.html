@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
@@ -18,20 +18,20 @@
   </header>
 
   <main id="maincontent">
-    <section role="Google Map" id="map-container" tabindex="-1">
-      <div role="Map" id="map" tabindex="-1"></div>
+    <section role="complementary" id="map-container" tabindex="-1">
+      <div role="application" id="map" tabindex="-1"></div>
     </section>
-    <section role="details container" id="details-container">
-      <div role="Filter Options" class="filter-options">
+    <section role="separator" id="details-container">
+      <div role="search" class="filter-options">
         <h2>Filter Results</h2>
-        <select role="neighborhood select" tabindex="1" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select role="form" tabindex="1" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select role="cuisine select" tabindex="1" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select role="form" tabindex="1" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul role="Restaurant List" id="restaurants-list" tabindex="1"></ul>
+      <ul role="main" id="restaurants-list" tabindex="1"></ul>
     </section>
   </main>
 
